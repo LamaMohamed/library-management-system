@@ -5,16 +5,16 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 
-import { BASE_API_URL } from '../core/constants/index.js';
-import authRoutes from './auth/routes/authRoutes.js';
-import authMiddleware from '../core/auth/middleware/authMiddleware.js';
+import { BASE_API_URL } from './core/constants/index.js';
+import authRoutes from './core/auth/routes/authRoutes.js';
+import authMiddleware from './core/auth/middleware/authMiddleware.js';
 
-import bookRoutes from '../features/books/routes/bookRoutes.js';
-import borrowerRoutes from '../features/borrowers/routes/borrowerRoutes.js';
-import borrowingRoutes from '../features/borrowing/routes/borrowingRoutes.js';
+import bookRoutes from './features/books/routes/bookRoutes.js';
+import borrowerRoutes from './features/borrowers/routes/borrowerRoutes.js';
+import borrowingRoutes from './features/borrowing/routes/borrowingRoutes.js';
 
-import { apiRateLimiter } from './middleware/rateLimiter.js';
-import { errorHandler } from './middleware/errorMiddleware.js';
+import { apiRateLimiter } from './core/middleware/rateLimiter.js';
+import { errorHandler } from './core/middleware/errorMiddleware.js';
 
 const { authenticate } = authMiddleware;
 const app = express();

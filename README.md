@@ -28,8 +28,6 @@ The Library Management System is a backend service designed to manage book borro
   - Borrow and return books.
   - List overdue books.
   - Generate reports for borrowing processes.
-
-- **Export**:
   - Export all borrowing processes to CSV.
 
 ---
@@ -56,12 +54,20 @@ src/
 │   ├── auth/                  # Authentication and authorization
 │   ├── database/              # Database connection
 │   ├── logger/                # Logger setup
-│   ├── middleware/            # Reusable middleware (error handling, validation, etc.)
-│   ├── app.js                 # App setup
-│   ├── server.js              # Server startup logic
+│   ├── middleware/            # Reusable middleware (error handling,            validation, etc.)
 ├── features/
 │   ├── books/                 # Books module (models, routes, controllers, services)
 │   ├── borrowers/             # Borrowers module
 │   ├── borrowing/             # Borrowing module
-├── tests/                     # Unit tests
-├── index.js                   # App entry point
+├── app.js                     # App entry point
+├── server.js                  # Server startup logic
+tests/
+├── features/
+│   ├── books/
+│   │   ├── models/
+│   │   │   ├── Book.test.js
+│   │   ├── services/
+│   │   │   ├── bookService.test.js
+│   ├── controllers/
+│   │   ├── bookController.test.js
+

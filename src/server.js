@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import app from './app.js';
-import sequelize from './database/connection.js';
-import { initializeBooksIndex } from '../features/books/elasticsearch/booksIndex.js';
+import sequelize from './core/database/connection.js';
+import { initializeBooksIndex } from './features/books/elasticsearch/booksIndex.js';
 
 dotenv.config();
 
