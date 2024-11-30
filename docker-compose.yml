@@ -21,6 +21,13 @@ services:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data    
   app:
     build:
       context: .
@@ -35,10 +42,13 @@ services:
       - DB_PASS=postgres
       - DB_NAME=library
       - ELASTICSEARCH_NODE=http://elasticsearch:9200
+      - REDIS_URL=redis://redis:6379
     depends_on:
       - postgres
-      - elasticsearch    
+      - elasticsearch   
+      - redis
 volumes:
   db_data:
   elasticsearch_data:
+  redis_data:
 

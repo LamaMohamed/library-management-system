@@ -28,11 +28,20 @@ export const deleteBookRecord = asyncHandler(async (req, res) => {
 });
 
 /**
- * Controller to list all books.
+ * Controller to list paginated books.
  */
 export const listBooks = asyncHandler(async (req, res) => {
-    const books = await bookService.getBooks();
-    res.status(200).json({ books });
+    const { page = 1, pageSize = 10 } = req.query;
+
+    const parsedPage = parseInt(page, 10);
+    const parsedPageSize = parseInt(pageSize, 10);
+
+    const books = await bookService.getBooks(parsedPage, parsedPageSize);
+
+    res.status(200).json({
+        message: 'Books retrieved successfully',
+        data: books,
+    });
 });
 
 /**
@@ -47,7 +56,3 @@ export const searchBooksByQuery = async (req, res) => {
     const books = await bookService.searchBooks(query);
     res.status(200).json({ books });
 };
-// export const searchBooksByQuery = asyncHandler(async (req, res) => {
-//     const books = await searchBooks(req.query);
-//     res.status(200).json(books);
-// });

@@ -54,7 +54,7 @@ src/
 │   ├── auth/                  # Authentication and authorization
 │   ├── database/              # Database connection
 │   ├── logger/                # Logger setup
-│   ├── middleware/            # Reusable middleware (error handling,            validation, etc.)
+│   ├── middleware/            # Reusable middleware (error handling, validation, etc.)
 ├── features/
 │   ├── books/                 # Books module (models, routes, controllers, services)
 │   ├── borrowers/             # Borrowers module

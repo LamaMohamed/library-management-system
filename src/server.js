@@ -1,29 +1,24 @@
 import dotenv from 'dotenv';
 import app from './app.js';
 import sequelize from './core/database/connection.js';
-import { initializeBooksIndex } from './features/books/elasticsearch/booksIndex.js';
+import { initializeElasticsearch } from './core/services/elasticsearch.js'
+import { initializeBooksIndex } from './features/books/services/elasticsearch/bookElasticService.js';
+import { initializeRedis } from './core/services/redis.js';
 
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-// Initialize Elasticsearch Index
-const initializeElasticsearch = async () => {
-    try {
-        await initializeBooksIndex();
-        console.log('Elasticsearch indices initialized');
-    } catch (error) {
-        console.error('Failed to initialize Elasticsearch indices:', error.message);
-        process.exit(1); // Exit the process if Elasticsearch setup fails
-    }
-};
-
 
 // Start the Server
 const startServer = async () => {
     try {
-        // Initialize Elasticsearch
+         // Initialize services
+        await initializeRedis();
         await initializeElasticsearch();
+
+        // Initialize feature-specific indices
+        await initializeBooksIndex();
 
         // Sync the database
         await sequelize.sync({ alter: true });
