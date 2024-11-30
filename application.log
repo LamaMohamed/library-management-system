@@ -1,0 +1,20 @@
+{"level":"info","message":"Retrieve all books from the database","timestamp":"2024-11-30T15:36:32.700Z"}
+{"bookId":6,"level":"info","message":"Book created in the database","timestamp":"2024-11-30T15:43:03.092Z"}
+{"bookId":7,"level":"info","message":"Book created in the database","timestamp":"2024-11-30T15:48:20.109Z"}
+{"bookId":7,"level":"info","message":"Book indexed in Elasticsearch","timestamp":"2024-11-30T15:48:20.208Z"}
+{"bookId":8,"level":"info","message":"Book created in the database","timestamp":"2024-11-30T15:51:19.195Z"}
+{"bookId":8,"level":"info","message":"Book indexed in Elasticsearch","timestamp":"2024-11-30T15:51:19.244Z"}
+{"bookId":"8","level":"info","message":"Book updated in the database","timestamp":"2024-11-30T16:02:23.514Z"}
+{"bookId":"8","level":"info","message":"Book updated in the database","timestamp":"2024-11-30T16:06:57.103Z"}
+{"bookId":8,"level":"info","message":"Book updated in Elasticsearch","timestamp":"2024-11-30T16:06:57.184Z"}
+{"bookId":"8","level":"info","message":"Book updated in the database","timestamp":"2024-11-30T16:07:17.229Z"}
+{"bookId":8,"level":"info","message":"Book updated in Elasticsearch","timestamp":"2024-11-30T16:07:17.250Z"}
+{"level":"info","message":"Retrieve all books from the database","timestamp":"2024-11-30T17:01:21.199Z"}
+{"bookId":9,"level":"info","message":"Book created in the database","timestamp":"2024-11-30T17:09:04.102Z"}
+{"bookId":9,"level":"info","message":"Book indexed in Elasticsearch","timestamp":"2024-11-30T17:09:04.176Z"}
+{"level":"info","message":"Retrieve all books from the database","timestamp":"2024-11-30T18:35:41.590Z"}
+{"level":"info","message":"Retrieve all books from the database","timestamp":"2024-11-30T18:36:09.683Z"}
+{"error":"\"isbn\" with value \"978043955493779\" fails to match the required pattern: /^\\d{10}(\\d{3})?$/","level":"warn","message":"Invalid book data","timestamp":"2024-11-30T20:15:30.703Z"}
+{"bookId":10,"level":"info","message":"Book created in the database","timestamp":"2024-11-30T20:16:16.509Z"}
+{"bookId":10,"level":"info","message":"Book indexed in Elasticsearch","timestamp":"2024-11-30T20:16:16.638Z"}
+{"error":"\"isbn\" with value \"select * from\" fails to match the required pattern: /^\\d{10}(\\d{3})?$/","level":"warn","message":"Invalid book data","timestamp":"2024-11-30T20:17:06.601Z"}
