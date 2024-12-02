@@ -93,4 +93,5 @@ export default {
     loginUser,
     refreshAccessToken,
     clearRefreshTokenCookie,
+    setRefreshTokenCookie
 };

@@ -37,6 +37,7 @@ The Library Management System is a backend service designed to manage book borro
 - **Backend**: Node.js, Express.js
 - **Database**: PostgreSQL (using Sequelize ORM)
 - **Search**: Elasticsearch
+- **Cache**: Redis
 - **Authentication**: JWT (JSON Web Tokens)
 - **Logging**: Winston
 - **Rate Limiting**: Express Rate Limit
@@ -64,10 +65,8 @@ src/
 tests/
 ├── features/
 │   ├── books/
-│   │   ├── models/
-│   │   │   ├── Book.test.js
 │   │   ├── services/
 │   │   │   ├── bookService.test.js
-│   ├── controllers/
-│   │   ├── bookController.test.js
+│   │   ├── controllers/
+│   │   │   ├── bookController.test.js
 

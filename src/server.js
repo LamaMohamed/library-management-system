@@ -13,16 +13,26 @@ const PORT = process.env.PORT || 3000;
 // Start the Server
 const startServer = async () => {
     try {
-         // Initialize services
+        console.log('Initializing server...');
+
+        // Initialize services
+        console.log('Initializing Redis...');
         await initializeRedis();
+        console.log('Redis initialized successfully.');
+
+        console.log('Initializing Elasticsearch...');
         await initializeElasticsearch();
+        console.log('Elasticsearch initialized successfully.');
 
         // Initialize feature-specific indices
+        console.log('Initializing Elasticsearch indices...');
         await initializeBooksIndex();
+        console.log('Books index initialized successfully.');
 
         // Sync the database
-        await sequelize.sync({ alter: true });
-        console.log('Database connected');
+        console.log('Connecting to the database...');
+        await sequelize.sync();
+        console.log('Database connected successfully.');
 
         // Start listening for requests
         app.listen(PORT, () => {

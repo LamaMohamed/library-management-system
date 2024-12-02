@@ -2,27 +2,29 @@ import { asyncHandler } from '../../../core/middleware/errorMiddleware.js';
 
 import authService from '../services/authService.js';
 
+/**
+ * Registers a new user.
+ */
 export const register = asyncHandler(async (req, res) => {
-    const user = await authService.registerUser(req.body);
+    const { id, email, role } = await authService.registerUser(req.body);
+
     res.status(201).json({
         message: 'User registered successfully!',
-        user: { id: user.id, email: user.email, role: user.role },
+        user: { id, email, role },
     });
-
 });
 
+/**
+ * Logs in a user and sets the refresh token cookie.
+ */
 export const login = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
 
     // Authenticate the user
     const { user, accessToken, refreshToken } = await authService.loginUser({ email, password });
 
-    res.cookie('refreshToken', refreshToken, {
-        httpOnly: true,                         
-        secure: process.env.NODE_ENV === 'production', 
-        sameSite: 'strict',                     
-        maxAge: 7 * 24 * 60 * 60 * 1000,      
-    });
+    // Set HTTP-only refresh token cookie
+    authService.setRefreshTokenCookie(res, refreshToken);
 
     res.status(200).json({
         message: 'Login successful',

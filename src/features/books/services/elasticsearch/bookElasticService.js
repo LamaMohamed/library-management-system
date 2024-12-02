@@ -15,7 +15,8 @@ export const initializeBooksIndex = async () => {
 };
 
 export const indexBook = async (book) => {
-    await getElasticClient.index({
+    const client = getElasticClient();
+    await client.index({
         index: BOOKS_INDEX,
         id: book.id,
         body: {
@@ -29,7 +30,9 @@ export const indexBook = async (book) => {
 
 export const updateBookInIndex = async (book) => {
     try {
-        await getElasticClient.update({
+        const client = getElasticClient();
+
+        await client.update({
             index: BOOKS_INDEX,
             id: book.id,
             body: {
@@ -47,12 +50,15 @@ export const updateBookInIndex = async (book) => {
 };
 
 export const deleteBookFromIndex = async (id) => {
-    await getElasticClient.delete({ index: BOOKS_INDEX, id });
+    const client = getElasticClient();
+    await client.delete({ index: BOOKS_INDEX, id });
 };
 
 
 export const searchBooks = async (query, page = 1, size = 10) => {
-    const result = await getElasticClient.search({
+    const client = getElasticClient();
+
+    const result = await client.search({
         index: BOOKS_INDEX,
         from: (page - 1) * size,
         size,

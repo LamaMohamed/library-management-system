@@ -155,3 +155,115 @@
 {"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 01:51:20"}
 {"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 01:51:20"}
 {"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 01:51:20"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:37:04"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:37:04"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:37:04"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:37:04"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:38:18"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:38:18"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:38:18"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:38:18"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:38:21"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:38:21"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:38:21"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:38:21"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:39:40"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:39:40"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:39:40"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:39:40"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:40:17"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:40:17"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:40:17"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:40:17"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:44:22"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:44:22"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:44:22"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:44:22"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 02:56:58"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 02:56:58"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 02:56:58"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 02:56:58"}
+{"level":"info","message":"Cache miss for key: books_list_1_5","timestamp":"2024-12-01 02:59:49"}
+{"level":"info","message":"Books for page 1 retrieved from the database","timestamp":"2024-12-01 02:59:49"}
+{"level":"info","message":"Cache set for key: books_list_1_5","timestamp":"2024-12-01 02:59:49"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:09"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:10"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:10"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:10"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:11"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:11"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:12"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:12"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:13"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:13"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:14"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:14"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:15"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:15"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:16"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:16"}
+{"code":"ECONNREFUSED","level":"error","message":"Redis Client Error:","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1117:18)\n    at afterConnectMultiple (node:net:1684:7)","timestamp":"2024-12-01 22:52:17"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 22:52:36"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 22:52:38"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 22:52:38"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 22:52:38"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 22:54:40"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 22:54:40"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 22:54:40"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 22:54:40"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 22:55:28"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 22:55:28"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 22:55:28"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 22:55:28"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:35:47"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:35:47"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:35:47"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:35:47"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:37:28"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:37:28"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:37:28"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:37:28"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:42:56"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:42:56"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:42:56"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:42:56"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:43:31"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:43:31"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:43:31"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:43:31"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:43:45"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:43:45"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:43:45"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:43:45"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:46:50"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:46:50"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:46:50"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:46:50"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:48:08"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:48:08"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:48:08"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:48:08"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:48:57"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:48:57"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:48:57"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:48:57"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:50:06"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:50:06"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:50:06"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:50:06"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-01 23:52:19"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-01 23:52:20"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-01 23:52:20"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-01 23:52:20"}
+{"bookId":1,"level":"info","message":"Book created in the database","timestamp":"2024-12-02 00:14:12"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-02 00:26:45"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-02 00:26:45"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-02 00:26:45"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-02 00:26:45"}
+{"bookId":5,"level":"info","message":"Book created in the database","timestamp":"2024-12-02 00:27:17"}
