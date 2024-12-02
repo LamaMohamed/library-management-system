@@ -9,7 +9,8 @@
 6. [API Documentation](#api-documentation)
 7. [ERD Diagram](#erd-diagram)
 8. [Non Functional Requirment](#non-functional-requirment)
-9. [Error Handling and Validations](#error-handling-and-validations)
+9. [Error Handling, Validations, and Logger](#error-handling-validations-and-logger)
+10. [TODOs Enhanecments](#todos-enhancements)
 
 ---
 
@@ -490,7 +491,7 @@ tests/
     };
   ```
 
-## Error Handling and Validations
+## Error Handling, Validations, and Logger
  - **Global Error Middleware** 
    ```plaintext
     /**
@@ -545,4 +546,16 @@ tests/
   };
 ```
 ![alt text](./public/assets/Screenshot%202024-12-02%20at%208.58.32 PM.png)
+
+- **Logger Middleware**: log info level into file
+![alt text](./public/assets/image.png)
+
+
+## TODOs Enhanecments
+  - Implements messaging system  (e.g. RabbitMQ/Kafka)Enable push notifications to alert users when a book is back in stock.
+
+
+
+
+
 
