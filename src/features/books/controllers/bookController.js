@@ -1,12 +1,14 @@
 import { asyncHandler } from '../../../core/middleware/errorMiddleware.js';
 
 import bookService from '../services/bookService.js';
+import logger from '../../../core/logger/logger.js'
 
 /**
- * Controller to create a new borrower.
+ * Controller to add a new book.
  */
 export const createBook = asyncHandler(async (req, res) => {
     const book = await bookService.createBook(req.body);
+    logger.info("Add new book");
     res.status(201).json({ message: 'Book created successfully', book });
 });
 

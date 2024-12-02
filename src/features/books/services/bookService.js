@@ -33,7 +33,6 @@ export const createBook = async (bookData) => {
  */
 export const updateBook = async (bookId, updtedBookData) => {
     const sanitizedBookId = sanitizeId(bookId);
-
     const book = await Book.findByPk(sanitizedBookId);
     if (!book) {
         logger.warn('Book not found for update', { bookId });

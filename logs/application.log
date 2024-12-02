@@ -400,3 +400,15 @@
 {"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-02 02:29:46"}
 {"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-02 02:29:46"}
 {"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-02 02:29:46"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-02 19:42:52"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-02 19:42:52"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-02 19:42:52"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-02 19:42:52"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-02 20:12:40"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-02 20:12:40"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-02 20:12:40"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-02 20:12:40"}
+{"level":"info","message":"Connected to Redis successfully","timestamp":"2024-12-02 20:12:50"}
+{"level":"info","message":"Elasticsearch cluster health:","timestamp":"2024-12-02 20:12:50"}
+{"level":"info","message":"Elasticsearch client initialized successfully","timestamp":"2024-12-02 20:12:50"}
+{"level":"info","message":"Index 'books' already exists","timestamp":"2024-12-02 20:12:50"}

@@ -5,6 +5,7 @@ import borrowingService from '../services/borrowingService.js';
  * Controller to handle book checkout.
  */
 export const checkout = asyncHandler(async (req, res) => {
+    console.log(req.user.email)
     const record = await borrowingService.checkoutBook(req.body);
     res.status(201).json({ message: 'Book checked out successfully', record });
 });

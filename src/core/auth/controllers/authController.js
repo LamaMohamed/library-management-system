@@ -10,7 +10,6 @@ export const register = asyncHandler(async (req, res) => {
 
     res.status(201).json({
         message: 'User registered successfully!',
-        user: { id, email, role },
     });
 });
 
@@ -28,7 +27,6 @@ export const login = asyncHandler(async (req, res) => {
 
     res.status(200).json({
         message: 'Login successful',
-        user: { id: user.id, email: user.email, role: user.role }, 
         accessToken,
     });});
 

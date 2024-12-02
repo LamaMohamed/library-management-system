@@ -27,4 +27,15 @@ export const validateBookData = (data) => {
 /**
  * Sanitizes an ID to prevent SQL injection.
  */
-export const sanitizeId = (id) => sequelize.escape(id);
+export const sanitizeId = (id) => {
+    if (typeof id !== 'string' && typeof id !== 'number') {
+        throw new Error(`Invalid ID type: ${typeof id}`);
+    }
+
+    const parsedId = parseInt(id, 10);
+    if (isNaN(parsedId) || parsedId <= 0) {
+        throw new Error(`Invalid ID provided: ${id}`);
+    }
+
+    return parsedId;
+};

@@ -6,7 +6,7 @@ import borrowerService from '../services/borrowerService.js';
  * Controller to create a new borrower.
  */
 export const createBorrower = asyncHandler(async (req, res) => {
-    const borrower = await borrowerService.registerBorrower(req.body);
+    const borrower = await borrowerService.registerBorrower({...req.body,userId: req.user.id});
     res.status(201).json({ message: 'Borrower created successfully', borrower });
 });
 
@@ -14,7 +14,7 @@ export const createBorrower = asyncHandler(async (req, res) => {
  * Controller to update borrower details.
  */
 export const updateBorrower = asyncHandler(async (req, res) => {
-    const borrower = await borrowerService.updateBorrowerDetails(req.params.id, req.body);
+    const borrower = await borrowerService.updateBorrowerDetails(req.params.id, {...req.body,userId: req.user.id});
     res.status(200).json({ message: 'Borrower updated successfully', borrower });
 });
 

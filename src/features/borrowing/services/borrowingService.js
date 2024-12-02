@@ -52,7 +52,7 @@ export const getBorrowerBooks = async (borrowerId) => {
 export const getOverdueBooks = async () => {
     const now = new Date();
     return Borrowing.findAll({
-        where: { returned: false, dueDate: { $lt: now } },
+        where: { returned: false, dueDate: { [Op.lte]: now } },
         include: [Book, Borrower],
     });
 };

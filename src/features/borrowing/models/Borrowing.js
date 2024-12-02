@@ -41,14 +41,12 @@ const Borrowing = sequelize.define(
 
 Borrowing.belongsTo(Borrower, {
     foreignKey: 'borrowerId',
-    as: 'borrower',
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
 });
 
 Borrowing.belongsTo(Book, {
     foreignKey: 'bookId',
-    as: 'book',
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
 });
