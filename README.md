@@ -7,11 +7,14 @@
 4. [Application Setup and Prerequisites](#application-setup-and-prerequisites)
 5. [Project Structure](#project-structure)
 6. [API Documentation](#api-documentation)
+7. [ERD Diagram](#erd-diagram)
+8. [Non Functional Requirment](#non-functional-requirment)
+9. [Error Handling and Validations](#error-handling-and-validations)
 
 ---
 
 ## Introduction
-The Library Management System is a backend service designed to manage book borrowing, returning, and user accounts efficiently. It also provides analytical reporting and export features for borrowing data in CSV.
+The Library Management System is a RESTful API backend service designed to manage book borrowing, returning, and user accounts efficiently. It also provides analytical reporting and export features for borrowing data in CSV.
 
 ---
 
@@ -62,6 +65,10 @@ The Library Management System is a backend service designed to manage book borro
 ---
 
 ## Application Setup and Prerequisites
+#### APP Port: 3000
+#### Postgres Port: 5432
+#### Redis Port: 6379 
+#### Elasticsearch Port: 9200 
 - Ensure that Docker and Docker Compose are installed on your system.
 
 - Run the following command to build and run the application:
@@ -95,7 +102,7 @@ tests/
 ```
 
 ## API Documentation
-#### PORT: 3000
+
 #### Base_URL: /api/v1
 
 - **Users**
@@ -414,12 +421,12 @@ tests/
 
     - Return Book: POST /borrowing/return
         -  Request
-          ```plaintext
+        ```plaintext
           {
             "borrowerId": 2,
             "bookId": 2
           }
-          ```
+        ```
 
        - Response 
         ```plaintext
@@ -440,3 +447,102 @@ tests/
        
     - Export Borrowing Overdue: GET /borrowing/export/overdue
     - Export Borrowing between Period to CSV: GET /borrowing/report?startDate=2024-10-11&endDate=2025-10-11
+
+## ERD Diagram
+![alt text](./public/assets/erd.png)
+
+## Non Functional Requirment
+- **Performance and Scalability**  
+  - ***API Function getBooks***: function provides paginated access to a list of books to handle large datasets. Redis server to store and retrieve cached paginated results.
+  - ***API Function searchBooks***: performs a full-text search on the books indexed fields (title, author, isbn). When server start; createIndexIfNotExists to check if the index exists. If not, it creates the index
+  - ***Index Columns***: Index (title, author, isbn) columns in books table.
+  - ***Project Structure***: a modular structure for building scalable app, and allows for easy addition for new features "e.g. reservations,..".
+  - ***Rate Limiter***: limit each user to request to 100 per 15min. 
+    ![alt text](./public/assets/Screenshot%202024-12-02%20at%208.31.02 PM.png)
+- **Secuirty**   
+  - ***Sanitize query ID: /src/features/books/validations/validationService.js***: 
+  - ***Hash user Password: src/core/auth/services/authService.js***:
+  ``` plaintext
+  /**
+  * Registers a new user.
+  */
+    export const registerUser = async ({ name, email, password, role }) => {
+        const hashedPassword = await hash(password, 10);
+        return User.create({ name, email, password: hashedPassword, role });
+    };
+  ```
+  - ***Enable CORS***:allow requests from specific trusted origins 
+  ```plaintext
+    /**
+    * Sanitizes an ID to prevent SQL injection.
+    */
+    export const sanitizeId = (id) => {
+        if (typeof id !== 'string' && typeof id !== 'number') {
+            throw new Error(`Invalid ID type: ${typeof id}`);
+        }
+
+        const parsedId = parseInt(id, 10);
+        if (isNaN(parsedId) || parsedId <= 0) {
+            throw new Error(`Invalid ID provided: ${id}`);
+        }
+
+        return parsedId;
+    };
+  ```
+
+## Error Handling and Validations
+ - **Global Error Middleware** 
+   ```plaintext
+    /**
+    * Async error handler wrapper
+    */
+    export const asyncHandler = (fn) => (req, res, next) => {
+        Promise.resolve(fn(req, res, next)).catch(next);
+    };
+
+    /**
+    * Global error handler middleware
+    */
+    export const errorHandler = (err, req, res, next) => {
+        console.error(err.stack);
+
+        if (err instanceof ValidationError) {
+            return res.status(400).json({
+                error: 'Validation Error',
+                details: err.errors.map((error) => ({
+                    field: error.path,
+                    message: error.message,
+                })),
+            });
+        }
+
+        res.status(err.status || 500).json({
+            error: err.message || 'Internal Server Error',
+        });
+    }; 
+   ```
+- **Validation**: model validation and requests
+```plaintext
+   /**
+   * Validates book data using Joi.
+   */
+  export const validateBookData = (data) => {
+    const schema = Joi.object({
+        title: Joi.string().max(255).required(),
+        author: Joi.string().max(255).required(),
+        isbn: Joi.string().pattern(/^\d{10}(\d{3})?$/).required(), // ISBN-10 or ISBN-13
+        quantity: Joi.number().integer().min(1).required(),
+        shelfLocation: Joi.string().max(100).optional(),
+    });
+
+    const { error, value } = schema.validate(data);
+    if (error) {
+        logger.warn('Invalid book data', { error: error.message });
+        throw new Error(error.details[0].message);
+    }
+
+    return value;
+  };
+```
+![alt text](./public/assets/Screenshot%202024-12-02%20at%208.58.32 PM.png)
+
