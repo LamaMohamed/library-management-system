@@ -127,17 +127,16 @@ tests/
     - Login: POST /auth/login     
       - Request
         ```plaintext
-          {
-            "email": "test4@gmail.com",
-            "name": "Lama",
-            "password": "test_dhdhd",
-            "role": "admin"
-          }
+        {
+          "email": "test4@gmail.com",
+          "password": "test_dhdhd"
+        }
         ```
       - Response 
         ```plaintext
         {
-          "message": "User registered successfully!"
+          "message": "Login successful",
+          "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMzMTY2ODk0LCJleHAiOjE3MzMxNzA0OTR9.g8MSqJ8ZtOBKx6vSI30mWKBWN-9VxpVdsE4WaLyz4Iw"
         }
         ```
         And set refresh token 
