@@ -35,7 +35,7 @@ export const listOverdueBooks = asyncHandler(async (req, res) => {
 });
 
 /**
- * Retrieves borrowing processes in a specific period.
+ * Retrieves borrowing processes in a specific period to csv.
  */
 export const getBorrowingReport = asyncHandler(async (req, res) => {
     const { startDate, endDate } = req.query;
@@ -49,12 +49,12 @@ export const getBorrowingReport = asyncHandler(async (req, res) => {
     const csvData = borrowingService.exportToCsv(borrowingData);
 
     res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', 'attachment; filename="borrowimg_report.csv"');
+    res.setHeader('Content-Disposition', 'attachment; filename="borrowing_report.csv"');
     res.send(csvData);
 });
 
 /**
- * Exports overdue borrows of the last month to CSV
+ * Exports overdue borrows of the last month
  */
 export const exportOverdueBorrows = asyncHandler(async (req, res) => {
 

@@ -460,7 +460,8 @@ tests/
   - ***Rate Limiter***: limit each user to request to 100 per 15min. 
     ![alt text](./public/assets/Screenshot%202024-12-02%20at%208.31.02 PM.png)
 - **Secuirty**   
-  - ***Sanitize query ID: /src/features/books/validations/validationService.js***: 
+  - ***Enable CORS***:allow requests from specific trusted origins 
+  
   - ***Hash user Password: src/core/auth/services/authService.js***:
   ``` plaintext
   /**
@@ -471,7 +472,8 @@ tests/
         return User.create({ name, email, password: hashedPassword, role });
     };
   ```
-  - ***Enable CORS***:allow requests from specific trusted origins 
+
+  - ***Sanitize query ID: /src/features/books/validations/validationService.js***: 
   ```plaintext
     /**
     * Sanitizes an ID to prevent SQL injection.
